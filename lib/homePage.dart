@@ -3,7 +3,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(title: Text("GetX App"),),
+      body: Center(child: Text("GetX for practice"),),
     );
   }
 }
