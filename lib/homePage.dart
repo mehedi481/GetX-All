@@ -12,7 +12,13 @@ class HomePage extends StatelessWidget {
         child: MaterialButton(
           onPressed: () {
             // Snackbar has more property for customization
-            Get.snackbar("Title", "Your Messages",snackPosition: SnackPosition.BOTTOM);
+            Get.snackbar("Title", "Your Messages",
+                snackPosition: SnackPosition.BOTTOM,
+                animationDuration: Duration(seconds: 3),
+                backgroundGradient: LinearGradient(colors: [
+                  Colors.red,
+                  Colors.green,
+                ]));
           },
           child: Text("SnackBar"),
         ),
