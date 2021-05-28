@@ -10,15 +10,37 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: MaterialButton(
+          color: Colors.orange,
           onPressed: () {
-            // Snackbar has more property for customization
-            Get.snackbar("Title", "Your Messages",
-                snackPosition: SnackPosition.BOTTOM,
-                animationDuration: Duration(seconds: 3),
-                backgroundGradient: LinearGradient(colors: [
-                  Colors.red,
-                  Colors.green,
-                ]));
+            // Dialog has more property for customization
+            Get.defaultDialog(
+              title: "This is Title",
+              content: Container(
+                child: Row(
+                  children: [
+                    Text("Native Ads"),
+                    Expanded(
+                      child: Container(
+                        color: Colors.red,
+                        height: 50,
+                        width: 20,
+                        child: Text("ADS"),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              actions: [
+                MaterialButton(
+                  color: Colors.blue,
+                  onPressed: () {
+                    Get.back();
+                  },
+                  child: Text("OK"),
+                ),
+              ],
+              barrierDismissible: false,
+            );
           },
           child: Text("SnackBar"),
         ),
