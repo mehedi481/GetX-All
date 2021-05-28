@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
               barrierDismissible: false,
             );
           },
-          child: Text("SnackBar"),
+          child: Text("Dialog"),
         ),
       ),
     );
